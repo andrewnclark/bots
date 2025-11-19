@@ -1837,7 +1837,7 @@ tooltipLooksLikeMiningModule =
     .allContainedDisplayTextsWithRegion
         >> List.map Tuple.first
         >> List.any
-            (Regex.fromString "\\d\\s*m3\\s*\\/\\s*s" |> Maybe.map Regex.contains |> Maybe.withDefault (always False))
+            (Regex.fromString "\\d\\s*m[³3]\\s*\\/\\s*s" |> Maybe.map Regex.contains |> Maybe.withDefault (always False))
 
 
 tooltipLooksLikeModuleToActivateAlways : BotDecisionContext -> ModuleButtonTooltipMemory -> Maybe String
